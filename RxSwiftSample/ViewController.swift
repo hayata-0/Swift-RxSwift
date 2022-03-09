@@ -50,6 +50,24 @@ class ViewController: UIViewController {
         bindTableData()
     }
 
+    func bindTableData() {
+        viewModel.items.bind(
+            to: tableView.rx.items(
+                cellIdentifier: "cell",
+                cellType: UITableViewCell.self
+            )
+        ){ row,model,cell in
+            cell.textLabel?.text = model.title
+            cell.imageView?.image = UIImage(systemName: model.imageName)
+            
+        }.disposed(by: bag)
+        
+        tableView.rx.modelSelected(Product.self).bind { product in
+            print(product.title)
+        }.disposed(by: bag)
+        
+        viewModel.fetchItem()
+    }
 
 }
 
