@@ -18,3 +18,27 @@ Swift
 * Xcode 12.x
 * Swift 5.x
 
+### Installation
+1. PodFileに下記の記述を追加する
+```html
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'RxSwiftSample' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for RxSwiftSample
+
+  pod 'RxSwift'
+  pod 'RxCocoa'
+
+end
+```
+
+2. pod installを行う
+```html
+pod install
+```
+
+
