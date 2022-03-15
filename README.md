@@ -68,3 +68,7 @@ NotificationCenterからの通知を受け取る処理をRxSwiftで書いたら�
 
 ##### SwinjectのREADMEは下記
 `https://github.com/ReactiveX/RxSwift`
+
+### 今後の課題
+まだまだ、RxSwiftについての理解が浅いので今後は実践で使用してみて、慣れていこうかと思っております。
+最初に勉強する際には、書籍などを活用するのをオススメします
