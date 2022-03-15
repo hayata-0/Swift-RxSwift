@@ -41,4 +41,30 @@ end
 pod install
 ```
 
+### 例
+> 例)URLSession
+```html
+session.rx.response(request)
+    .catchError {
+        // エラー時の処理
+    .subscribe {
+        // レスポンス受け取り時の処理
+    }
+    .disposed(by: disposeBag)
+```
 
+RxSwiftで書くと上記のようになります。
+
+> 例)Notification
+```html
+NotificationCenter.default.rx.notification(..)
+    .subscribe { [unowned self] _ in
+        // 通知受け取り時の処理
+    }
+    .disposed(by: disposeBag)
+```
+
+NotificationCenterからの通知を受け取る処理をRxSwiftで書いたら上記のようになります。
+
+##### SwinjectのREADMEは下記
+`https://github.com/ReactiveX/RxSwift`
